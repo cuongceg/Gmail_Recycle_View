@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gmail</string>
+    <string name="gmail_search_hint">Search mail</string>
+    <string name="gmail_search_hint_description">Search mail for Gmail</string>
+</resources>
