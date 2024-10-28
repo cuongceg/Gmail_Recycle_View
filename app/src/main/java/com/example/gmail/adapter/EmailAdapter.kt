@@ -28,7 +28,7 @@ class EmailAdapter(private var emails: List<Email>):RecyclerView.Adapter<EmailAd
 
     override fun onBindViewHolder(holder: EmailViewHolder, position: Int) {
         val email = emails[position]
-        holder.iconImageView.setImageResource(email.imageId)
+        holder.iconImageView.setBackgroundResource(email.backgroundId)
         holder.titleTextView.text = email.title
         holder.descriptionTextView.text = email.description
         holder.timestampTextView.text = email.time
