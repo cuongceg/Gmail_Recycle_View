@@ -6,5 +6,5 @@ data class Email(
     val title: String,
     val description: String,
     val time: String,
-    val imageId:Int = R.drawable.ic_launcher_foreground
+    val backgroundId:Int = R.drawable.avatar_blue_background
 )

@@ -10,7 +10,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/avatar_blue_background" />
+        android:src="@drawable/ic_launcher_foreground"/>
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
