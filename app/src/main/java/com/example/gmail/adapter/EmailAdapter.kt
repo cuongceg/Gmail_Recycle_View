@@ -13,10 +13,8 @@ class EmailAdapter(private var emails: List<Email>):RecyclerView.Adapter<EmailAd
     private var allEmails: List<Email> = emails
 
     class EmailViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val iconImageView: ImageView = itemView.findViewById(R.id.iconImageView)
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
-        val timestampTextView: TextView = itemView.findViewById(R.id.timestampTextView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmailViewHolder {
@@ -28,14 +26,12 @@ class EmailAdapter(private var emails: List<Email>):RecyclerView.Adapter<EmailAd
 
     override fun onBindViewHolder(holder: EmailViewHolder, position: Int) {
         val email = emails[position]
-        holder.iconImageView.setBackgroundResource(email.backgroundId)
         holder.titleTextView.text = email.title
         holder.descriptionTextView.text = email.description
-        holder.timestampTextView.text = email.time
     }
 
     fun filter(query: String) {
-        emails = if (query.isEmpty()) {
+        emails = if (query.length < 3) {
             allEmails
         } else {
             allEmails.filter {
